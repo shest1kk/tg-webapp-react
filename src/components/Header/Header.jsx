@@ -11,9 +11,7 @@ const Header = () => {
             <img className={'header-logo'}
             src={require('../../assets/logo192.png')}
             alt='Логотип ЭйКей'/>
-            <span className={'header-username'}>
-                Привет, {user?.username}!
-            </span>
+            <div className={'header-username'}>Привет, {user?.first_name}!</div>
         </div>
     )
 
