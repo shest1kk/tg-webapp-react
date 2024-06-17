@@ -1,5 +1,24 @@
+.LongRead {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .FirstPage-img,
-.SecondPage-img {
-    height: 100vh;
+.SecondPage-img,
+.ThirdPage-img,
+.FourthPage-img,
+.FivthPage-img,
+.SixthPage-img,
+.SeventhPage-img,
+.EightPage-img,
+.NinePage-img,
+.TenPage-img,
+.ElevenPage-img,
+.TwelvePage-img,
+.ThirdteenPage-img,
+.FourthreenPage-img,
+.FivthteenPage-img {
     width: 100vw;
+
 }
