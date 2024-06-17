@@ -1,6 +1,6 @@
 .button {
     padding: 10px 15px;
-    background: #0042A6;
+    background: var(--tg-theme-button-text-color);
     color: var(--tg-theme-button-text-color);
     border: none;
     outline: none;
