@@ -2,10 +2,18 @@
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    color: #fff;
 }
 
 .startPage {
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+    background-image: url('../../../assets/background-main.jpg'); 
 }
 
 .startPage-logo{

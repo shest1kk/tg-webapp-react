@@ -11,15 +11,15 @@ const StartPage = () => {
     return (
         <div className={'startPage'}>
             <img className={'startPage-logo'}
-            src={require('../../../assets/logo192.png')}
+            src={require('../../../assets/logo.png')}
             alt='Логотип ЭйКей'/>
-            <div className={'startPage-username'}>Привет, {user?.first_name}!
+            <div className={'startPage-username'}>Привет, {user?.first_name}!</div>
             <Link to="/sections">
                 <Button className={"primary-button"}>
                     Перейти к разделам
                 </Button>
             </Link>
-            </div>
+            
         </div>
     )
 
