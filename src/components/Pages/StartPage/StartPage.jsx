@@ -4,25 +4,24 @@ import { useTelegram } from "../../../hooks/useTelegram";
 import Button from "../../Buttons/Button";
 import { Link } from "react-router-dom";
 
-
 const StartPage = () => {
-    const {user} = useTelegram();
+    const { user } = useTelegram();
     
     return (
-        <div className={'startPage'}>
-            <img className={'startPage-logo'}
-            src={require('../../../assets/logo.png')}
-            alt='Логотип ЭйКей'/>
-            <div className={'startPage-username'}>Привет, {user?.first_name}!</div>
+        <div className="startPage">
+            <img 
+                className="startPage-logo"
+                src={require('../../../assets/logo.png')}
+                alt="Логотип ЭйКей"
+            />
+            <div className="startPage-username">Привет, {user?.first_name}!</div>
             <Link to="/sections">
-                <Button className={"primary-button"}>
+                <Button className="primary-button">
                     Перейти к разделам
                 </Button>
             </Link>
-            
         </div>
-    )
-
+    );
 }
 
 export default StartPage;
