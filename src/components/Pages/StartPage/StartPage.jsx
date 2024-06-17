@@ -9,13 +9,16 @@ const StartPage = () => {
     
     return (
         <div className={"startPage"}>
-            <div className={"startPage-wrapper"}>
-                <img 
+            <div className={'startPage-logo'}>
+            <img 
                     className={"startPage-logo"}
                     src={require('../../../assets/logo.png')}
                     alt="Логотип ЭйКей"
                 />
+            </div>
+            <div className={"startPage-wrapper"}>
                 <div className={'startPage-username'}>Привет, {user?.first_name}!</div>
+                <div className={'startPage-description'}>Здесь ты можешь узнать подробную информацию о мероприятии SSM2024</div>
                 <Link to={"/sections"}>
                     <Button className={'primary-button'}>
                         Перейти к разделам
