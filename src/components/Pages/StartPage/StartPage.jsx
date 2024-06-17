@@ -17,7 +17,7 @@ const StartPage = () => {
                 />
             </div>
             <div className={"startPage-wrapper"}>
-                <div className={'startPage-username'}>Привет, {user?.first_name}!</div>
+                <div className={'startPage-username'}><b>Привет, {user?.first_name}!</b></div>
                 <div className={'startPage-description'}>Здесь ты можешь узнать подробную информацию о мероприятии SSM2024</div>
                 <Link to={"/sections"}>
                     <Button className={'primary-button'}>
