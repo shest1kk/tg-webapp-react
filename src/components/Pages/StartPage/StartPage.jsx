@@ -9,6 +9,7 @@ const StartPage = () => {
     
     return (
         <div className="startPage">
+        <div className="startPage-wrapper">
             <img 
                 className="startPage-logo"
                 src={require('../../../assets/logo.png')}
@@ -20,6 +21,7 @@ const StartPage = () => {
                     Перейти к разделам
                 </Button>
             </Link>
+        </div>
         </div>
     );
 }

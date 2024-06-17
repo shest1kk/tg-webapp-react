@@ -1,6 +1,7 @@
 .button {
+    width: 20vw;
     padding: 10px 15px;
-    background: #ffffff;;
+    background: #ffffff;
     color: #000000;
     border: none;
     outline: none;

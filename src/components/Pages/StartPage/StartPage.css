@@ -20,18 +20,27 @@ html, body {
     box-sizing: border-box;
 }
 
+.startPage-wrapper {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 45vh;
+    align-content: center;
+    align-items: center;
+}
 .startPage-logo {
-    height: 64px;
-    width: 64px;
-    margin-bottom: 20px; /* Отступ между логотипом и текстом */
+    height: 20vh;
+    width: 20vw;
 }
 
 .startPage-username {
+    font-size: 24px;
+    width: 20vw;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     color: #fff;
-    margin-bottom: 20px; /* Отступ между текстом и кнопкой */
 }
 
 .primary-button {
