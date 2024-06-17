@@ -32,8 +32,12 @@ html, body {
 .startPage-logo {
     margin-bottom: 250px;
     height: 256px;
-    width: 256px;
+    width: 356px;
 
+}
+
+.startPage-username {
+    margin-top: 10px;
 }
 
 .startPage-username,
@@ -58,9 +62,9 @@ html, body {
     outline: none;
     cursor: pointer;
     border-radius: 15px;
-    width: 256px;
+    width: 80vw;
     height: 48px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* Адаптивные стили для маленьких экранов */
