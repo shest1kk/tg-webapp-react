@@ -1,7 +1,7 @@
 import React from "react";
 import './StartPage.css';
 import { useTelegram } from "../../../hooks/useTelegram";
-import Button from '../../Buttons/Button';
+import Button from "../../Buttons/Button";
 import { Link } from "react-router-dom";
 
 
