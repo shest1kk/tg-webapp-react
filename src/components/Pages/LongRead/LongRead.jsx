@@ -5,91 +5,101 @@ const LongRead = () => {
         <div className={'LongRead'}>
             <img 
                     className="FirstPage-img"
-                    src={require('../../../assets/1.jpg')}
+                    src='assets/1.jpg'
                     alt="Лонгрид"
                 />
 
             <img 
                     className="SecondPage-img"
-                    src={require('../../../assets/2.jpg')}
+                    src='/assets/2.jpg'
                     alt="Лонгрид"
                 />
 
             <img 
                     className="ThirdPage-img"
-                    src={require('../../../assets/3.jpg')}
+                    src='/assets/3.jpg'
                     alt="Лонгрид"
                 />
 
             <img 
                     className="FourthPage-img"
-                    src={require('../../../assets/4.jpg')}
+                    src='/assets/4.jpg'
                     alt="Лонгрид"
                 />
                 
             <img 
                     className="FivthPage-img"
-                    src={require('../../../assets/5.jpg')}
+                    src='/assets/5.jpg'
                     alt="Лонгрид"
                 />
 
             <img 
                     className="SixthPage-img"
-                    src={require('../../../assets/6.jpg')}
+                    src='/assets/6.jpg'
                     alt="Лонгрид"
                 />
 
             <img 
                     className="SeventhPage-img"
-                    src={require('../../../assets/7.jpg')}
+                    src='/assets/7.jpg'
                     alt="Лонгрид"
                 />
 
             <img 
                     className="EightPage-img"
-                    src={require('../../../assets/8.jpg')}
+                    src='/assets/8.jpg'
                     alt="Лонгрид"
                 />
 
             <img 
                     className="NinePage-img"
-                    src={require('../../../assets/9.jpg')}
+                    src='/assets/9.jpg'
                     alt="Лонгрид"
                 />
 
             <img 
                     className="TenPage-img"
-                    src={require('../../../assets/10.jpg')}
+                    src='/assets/10.jpg'
                     alt="Лонгрид"
                 />
 
             <img 
                     className="ElevenPage-img"
-                    src={require('../../../assets/11.jpg')}
+                    src='/assets/11.jpg'
                     alt="Лонгрид"
                 />
 
             <img 
                     className="TwelvePage-img"
-                    src={require('../../../assets/12.jpg')}
+                    src='/assets/12.jpg'
                     alt="Лонгрид"
                 />
 
             <img 
                     className="ThirdteenPage-img"
-                    src={require('../../../assets/13.jpg')}
+                    src='/assets/13.jpg'
                     alt="Лонгрид"
                 />
 
             <img 
                     className="FourthreenPage-img"
-                    src={require('../../../assets/14.jpg')}
+                    src='/assets/14.jpg'
                     alt="Лонгрид"
                 />
 
             <img 
                     className="FivthteenPage-img"
-                    src={require('../../../assets/15.jpg')}
+                    src='/assets/15.jpg'
+                    alt="Лонгрид"
+                />
+                            <img 
+                    className="FivthteenPage-img"
+                    src='/assets/16.jpg'
+                    alt="Лонгрид"
+                />
+                            <img 
+                    className="FivthteenPage-img"
+                    src='/assets/17.jpg'
                     alt="Лонгрид"
                 />
 
