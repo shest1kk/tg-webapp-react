@@ -63,7 +63,7 @@ const LongRead = () => {
                     alt="Лонгрид"
                 />
 
-            <img 
+{/*             <img 
                     className="ElevenPage-img"
                     src='/assets/11.jpg'
                     alt="Лонгрид"
@@ -102,7 +102,7 @@ const LongRead = () => {
                     src='/assets/17.jpg'
                     alt="Лонгрид"
                 />
-
+ */}
 
 
 
