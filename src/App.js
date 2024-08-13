@@ -9,6 +9,9 @@ import LongRead from './components/Pages/LongRead/LongRead';
 function App() {
 
   const {tg} = useTelegram();
+  tg.isExpanded;
+  tg.expand();
+  tg.enableClosingConfirmation();
 
   useEffect( () => {
     tg.ready();
