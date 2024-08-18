@@ -5,57 +5,26 @@ html, body {
     height: 100%;
 }
 
-.startPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-image: url('../../../assets/background-main.jpg');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 20px;
-}
 
-.startPage-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 5vh;
-}
-
-.startPage-logo-img {
-    margin-bottom: 250px;
-    height: 500px;
-    width: 500px;
-}
-
-.startPage-username {
-    margin-top: 10px;
-}
-
-.startPage-username,
-.startPage-description {
+.StartPage_username,
+.StartPage_description {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    color: #fff;
+    color: #000;
     font-size: 18px;
 }
 
-.startPage-description {
-    margin-top: 15px;
-    margin-bottom: 15px;
+.StartPage_description_plus {
+    font-size: 18px;
+    margin-top: 20px;
 }
 
-.primary-button {
+
+.button-primary-button {
     padding: 10px 15px;
-    background: #ffffff;
-    color: #000000;
+    background:  #fff;
+    color: #000;
     border: none;
     outline: none;
     cursor: pointer;
@@ -66,25 +35,104 @@ html, body {
 }
 
 
-/* Адаптивные стили для маленьких экранов */
-@media (max-width: 768px) {
-    .startPage {
-        padding: 10px;
-    }
-    
-    .startPage-logo-img {
-        height: 80px;
-        width: 80px;
-        margin-bottom: 15px;
-    }
-    
-    .startPage-username {
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-    
-    .primary-button {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
+
+
+.StartPage_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
 }
+
+.StartPage_image {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    margin-bottom: 40px;
+}
+
+.StartPage_image_img {
+    height: 40vh;
+    width: 100%;
+}
+
+.StartPage_text_wrapper {
+    color: #000;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 22px;
+}
+
+.startpage-button {
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+    background-color: #27a7e7; /* Фон кнопки */
+    color: white; /* Цвет текста */
+    font-family: 'Montserrat', sans-serif; /* Шрифт */
+    border: none; /* Убираем границу */
+    padding: 10px 20px; /* Внутренние отступы */
+    margin-bottom: 10px; /* Нижний отступ между кнопками */
+    text-align: center; /* Выравнивание текста по центру */
+    font-size: 16px; /* Размер шрифта */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Курсор в виде руки */
+    width: 100%; /* Кнопки занимают всю ширину контейнера */
+    
+}
+
+.StartPage_description {
+    margin-top: 5px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content .modal-button {
+    background-color: #27a7e7; /* Фон кнопки */
+    color: white; /* Цвет текста */
+    font-family: 'Montserrat', sans-serif; /* Шрифт */
+    border: none; /* Убираем границу */
+    padding: 10px 20px; /* Внутренние отступы */
+    margin-bottom: 10px; /* Нижний отступ между кнопками */
+    text-align: center; /* Выравнивание текста по центру */
+    font-size: 16px; /* Размер шрифта */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Курсор в виде руки */
+    width: 100%; /* Кнопки занимают всю ширину контейнера */
+}
+
+.modal-content {
+    width: 40vw;
+    display: flex;
+    
+}
+
+.modal-content .primary-button:last-child {
+    margin-bottom: 0; /* Убираем нижний отступ у последней кнопки */
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Отступы между кнопками */
+    
+}
+
+
