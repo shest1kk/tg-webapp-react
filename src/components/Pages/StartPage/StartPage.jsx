@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import './StartPage.css';
 import { useTelegram } from "../../../hooks/useTelegram";
 import Button from "../../Buttons/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const buttonsData = {
     main: [
-        { label: "PEOPLE", link: "#" },
-        { label: "PLACE", link: "#" },
+        { label: "PEOPLE", link: null },
+        { label: "PLACE", link: null },
         { label: "PROMO", link: "#" },
         { label: "PRODUCT", link: "#" }
     ],
@@ -18,9 +18,9 @@ const buttonsData = {
             { label: "Март", link: null },
             { label: "Апрель", link: null },
             { label: "Май", link: null },
-            { label: "Июнь", link: "/people/june" },
-            { label: "Июль", link: "/people/july" },
-            { label: "Август", link: "/people/august" },
+            { label: "Июнь", link: null },
+            { label: "Июль", link: null },
+            { label: "Август", link: null },
             // { label: "Сентябрь", link: null },
             // { label: "Октябрь", link: null },
             // { label: "Ноябрь", link: null },
@@ -32,37 +32,37 @@ const buttonsData = {
             { label: "Март", link: null },
             { label: "Апрель", link: null },
             { label: "Май", link: null },
-            { label: "Июнь", link: "/place/june" },
-            { label: "Июль", link: "/place/july" },
-            { label: "Август", link: "/place/august" },
+            { label: "Июнь", link: null },
+            { label: "Июль", link: null },
+            { label: "Август", link: null },
             // { label: "Сентябрь", link: null },
             // { label: "Октябрь", link: null },
             // { label: "Ноябрь", link: null },
             // { label: "Декабрь", link: null }
         ],
         PROMO: [
-            { label: "Январь", link: null },
-            { label: "Февраль", link: null },
-            { label: "Март", link: null },
-            { label: "Апрель", link: null },
-            { label: "Май", link: null },
-            { label: "Июнь", link: "/promo/june" },
-            { label: "Июль", link: "/promo/july" },
-            { label: "Август", link: "/promo/august" },
+            // { label: "Январь", link: null },
+            // { label: "Февраль", link: null },
+            // { label: "Март", link: null },
+            // { label: "Апрель", link: null },
+            // { label: "Май", link: null },
+            // { label: "Июнь", link: "/promo/june" },
+            // { label: "Июль", link: "/promo/july" },
+            { label: <span><span className="highlight">new</span> Август</span>, link: "/promo/august" },
             // { label: "Сентябрь", link: null },
             // { label: "Октябрь", link: null },
             // { label: "Ноябрь", link: null },
             // { label: "Декабрь", link: null }
         ],
         PRODUCT: [
-            { label: "Январь", link: null },
-            { label: "Февраль", link: null },
-            { label: "Март", link: null },
-            { label: "Апрель", link: null },
-            { label: "Май", link: null },
+            // { label: "Январь", link: null },
+            // { label: "Февраль", link: null },
+            // { label: "Март", link: null },
+            // { label: "Апрель", link: null },
+            // { label: "Май", link: null },
             { label: "Июнь", link: "/product/june" },
-            { label: "Июль", link: "/product/july" },
-            { label: "Август", link: "/product/august" },
+            { label: <span><span className="highlight">new</span> Июль</span>, link: "/product/july" },
+            // { label: "Август", link: "/product/august" },
             // { label: "Сентябрь", link: null },
             // { label: "Октябрь", link: null },
             // { label: "Ноябрь", link: null },
@@ -71,14 +71,23 @@ const buttonsData = {
     }
 };
 
-const StartPage = () => {
+const StartPage = ({ currentCategory }) => {
     const { user, tg } = useTelegram();
     const [isModalOpen, setModalOpen] = useState(false);
     const [currentButtons, setCurrentButtons] = useState(buttonsData.main);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const navigate = useNavigate();
 
-    useEffect(() => {}, [tg]);
+    useEffect(() => {
+        if (currentCategory) {
+            setSelectedCategory(currentCategory);
+            setCurrentButtons(buttonsData.months[currentCategory] || []);
+            setModalOpen(true);
+        } else {
+            setCurrentButtons(buttonsData.main);
+            setSelectedCategory(null);
+        }
+    }, [currentCategory]);
 
     const openModal = () => setModalOpen(true);
     const closeModal = () => {
@@ -97,7 +106,7 @@ const StartPage = () => {
             }
         } else {
             setSelectedCategory(buttonLabel);
-            setCurrentButtons(buttonsData.months[buttonLabel]);
+            setCurrentButtons(buttonsData.months[buttonLabel] || []);
         }
     };
 
@@ -112,9 +121,6 @@ const StartPage = () => {
 
     return (
         <div className="StartPage_wrapper">
-            <div className="StartPage_image">
-                <img className="StartPage_image_img" alt="Логотип ЭйКей" />
-            </div>
             <div className="StartPage_text_wrapper">
                 <div className="StartPage_username">
                     <b>Привет, {user?.first_name}!<br /></b>
@@ -137,9 +143,15 @@ const StartPage = () => {
                             <Button
                                 key={index}
                                 className="modal-button"
-                                onClick={() =>
-                                    selectedCategory ? handleMonthClick(button.link) : handleMainButtonClick(button.label)
-                                }
+                                onClick={() => {
+                                    if (selectedCategory) {
+                                        handleMonthClick(button.link);
+                                    } else if (button.link === null) {
+                                        alert("Скоро будет");
+                                    } else {
+                                        handleMainButtonClick(button.label);
+                                    }
+                                }}
                             >
                                 {button.label}
                             </Button>

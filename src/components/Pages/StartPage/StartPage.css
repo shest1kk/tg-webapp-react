@@ -72,15 +72,16 @@ html, body {
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 18px;
-    background-color: #27a7e7; /* Фон кнопки */
-    color: white; /* Цвет текста */
+    background-color: #fff; /* Фон кнопки */
+    color: #000; /* Цвет текста */
     font-family: 'Montserrat', sans-serif; /* Шрифт */
+    font-weight: bolder;
     border: none; /* Убираем границу */
     padding: 10px 20px; /* Внутренние отступы */
     margin-bottom: 10px; /* Нижний отступ между кнопками */
     text-align: center; /* Выравнивание текста по центру */
-    font-size: 16px; /* Размер шрифта */
-    border-radius: 5px; /* Скругленные углы */
+    font-size: 18px; /* Размер шрифта */
+    border-radius: 15px; /* Скругленные углы */
     cursor: pointer; /* Курсор в виде руки */
     width: 100%; /* Кнопки занимают всю ширину контейнера */
     
@@ -104,15 +105,16 @@ html, body {
 }
 
 .modal-content .modal-button {
-    background-color: #27a7e7; /* Фон кнопки */
-    color: white; /* Цвет текста */
+    background-color: #fff; /* Фон кнопки */
+    color: #000; /* Цвет текста */
     font-family: 'Montserrat', sans-serif; /* Шрифт */
+    font-weight: bold;
     border: none; /* Убираем границу */
     padding: 10px 20px; /* Внутренние отступы */
     margin-bottom: 10px; /* Нижний отступ между кнопками */
     text-align: center; /* Выравнивание текста по центру */
     font-size: 16px; /* Размер шрифта */
-    border-radius: 5px; /* Скругленные углы */
+    border-radius: 15px; /* Скругленные углы */
     cursor: pointer; /* Курсор в виде руки */
     width: 100%; /* Кнопки занимают всю ширину контейнера */
 }
@@ -136,3 +138,6 @@ html, body {
 }
 
 
+.highlight {
+    color: orange;
+}

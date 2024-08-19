@@ -1,24 +1,39 @@
 .LongRead {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-.FirstPage-img,
-.SecondPage-img,
-.ThirdPage-img,
-.FourthPage-img,
-.FivthPage-img,
-.SixthPage-img,
-.SeventhPage-img,
-.EightPage-img,
-.NinePage-img,
-.TenPage-img,
-.ElevenPage-img,
-.TwelvePage-img,
-.ThirdteenPage-img,
-.FourthreenPage-img,
-.FivthteenPage-img {
+img {
     width: 100vw;
 
+}
+
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Высота на весь экран */
+  }
+  
+  .loading-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffffff; /* Цвет текста */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .visible {
+    display: block;
+  }
+
+.loading-text {
+    margin-top: 20px;
+    font-family: 'Montseratt', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
 }
