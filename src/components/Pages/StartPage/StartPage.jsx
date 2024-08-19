@@ -4,6 +4,8 @@ import { useTelegram } from "../../../hooks/useTelegram";
 import Button from "../../Buttons/Button";
 import { useNavigate } from "react-router-dom";
 
+
+
 const buttonsData = {
     main: [
         { label: "PEOPLE", link: null },
