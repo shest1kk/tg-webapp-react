@@ -8,7 +8,8 @@ import LongRead from './components/Pages/LongRead/LongRead';
 
 function App() {
 
-  const {tg} = useTelegram();
+  const tg = window.Telegram.WebApp;
+  tg.isExpanded;
   tg.expand();
   tg.enableClosingConfirmation();
 
