@@ -27,7 +27,7 @@ const linkDictionary = {
         // Май: "/promo/may",
         // Июнь: "/promo/june",
         // Июль: "/promo/july",
-        Август: "promo/august",
+        Август: "/promo/august",
         // Сентябрь: "/promo/september",
         // Октябрь: "/promo/october",
         // Ноябрь: "/promo/november",
