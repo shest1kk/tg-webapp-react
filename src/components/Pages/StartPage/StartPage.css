@@ -196,4 +196,5 @@ html, body {
 a, u {
     text-decoration: none;
     color: #000;
+    padding: 10px;
 }
