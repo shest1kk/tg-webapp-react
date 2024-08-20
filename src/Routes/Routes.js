@@ -13,9 +13,9 @@ const AppRoutes = () => {
         <Routes>
         <Route path="/" element={<StartPage />} />
         <Route path='/sections' element={<AllSection />} />
-        <Route path='/product/june' element={<JuneProduct />} />
-        <Route path='/product/july' element={<JulyProduct />} />
-        <Route path='/promo/august' element={<AugustPromo />} />
+        <Route path='product/june' element={<JuneProduct />} />
+        <Route path='product/july' element={<JulyProduct />} />
+        <Route path='promo/august' element={<AugustPromo />} />
           {/* <Route path="longread" element={<LongRead />} /> */}
         </Routes>
       </Router>
