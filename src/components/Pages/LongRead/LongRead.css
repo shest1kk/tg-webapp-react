@@ -51,7 +51,7 @@ img {
   border-radius: 15px;
   cursor: pointer;
   z-index: 1000;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   transition: background-color 0.3s ease;
   font-family: 'Montseratt', sans-serif;
   font-size: 18px;
