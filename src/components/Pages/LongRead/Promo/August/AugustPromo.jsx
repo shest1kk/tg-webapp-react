@@ -59,9 +59,11 @@ const AugustPromo = () => {
       ))}
 
       {buttonVisible && (
+        <Link to='/sections'>
         <button className="back-button" onClick={handleBackClick}>
           Назад
         </button>
+        </Link>
       )}
     </div>
   );

@@ -84,22 +84,6 @@ const AllSection = () => {
         setSelectedCategory(null);
     };
 
-    // Обработка клика по месяцу
-    const handleMonthClick = (month) => {
-        if (selectedCategory === "PEOPLE" || selectedCategory === "PLACE") {
-            alert(`${selectedCategory} - ${month}`);
-        } else {
-            const url = linkDictionary[selectedCategory][month];
-            if (url) {
-                // Навигация по ссылке
-                window.location.href = url;
-            } else {
-                alert('Ссылка отсутствует');
-            }
-        }
-        handleCloseModal();
-    };
-
     // Обработчик клика вне модального окна
     const handleClickOutside = (event) => {
         if (modalRef.current && !modalRef.current.contains(event.target)) {
@@ -127,29 +111,27 @@ const AllSection = () => {
                 </div>
             </div>
 
-            {isModalOpen && (
-                <div className="modal">
-                    <div className="modal-content" ref={modalRef}>
-                        <h2 className={'selected-category'}>{selectedCategory}</h2>
-                        <ul>
-                            {Object.keys(linkDictionary[selectedCategory]).map((month) => (
-                                <li
-                                    className={'months'}
-                                    key={month}
+            <div className={`modal ${isModalOpen ? 'open' : ''}`}>
+                <div className="modal-content" ref={modalRef}>
+                    <h2 className={'selected-category'}>{selectedCategory}</h2>
+                    <ul>
+                        {Object.keys(linkDictionary[selectedCategory] || {}).map((month) => (
+                            <li
+                                className={'months'}
+                                key={month}
+                            >
+                                <Link
+                                    to={linkDictionary[selectedCategory][month]}
+                                    onClick={handleCloseModal} // Закрываем модальное окно при клике
                                 >
-                                    <Link
-                                        to={linkDictionary[selectedCategory][month]}
-                                        onClick={handleCloseModal}
-                                    >
-                                        {month}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                        <Button className={'modalClose-button'} onClick={handleCloseModal}>Закрыть</Button>
-                    </div>
+                                    {month}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                    <Button className={'modalClose-button'} onClick={handleCloseModal}>Закрыть</Button>
                 </div>
-            )}
+            </div>
         </div>
     );
 };

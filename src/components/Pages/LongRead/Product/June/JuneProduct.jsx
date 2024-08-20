@@ -59,9 +59,11 @@ const JuneProduct = () => {
       ))}
 
       {buttonVisible && (
-        <button className="back-button" onClick={handleBackClick}>
+        <Link to='/sections'>
+        <button className="back-button">
           Назад
         </button>
+        </Link>
       )}
     </div>
   );
