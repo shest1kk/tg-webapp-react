@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { SyncLoader } from "react-spinners";
 import '../../LongRead.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const importAll = (r) => {
   let images = {};
-  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  r.keys().map((item) => { images[item.replace('./', '')] = r(item); });
   return images;
 }
 
@@ -15,7 +15,9 @@ const AugustPromo = () => {
   const [loaded, setLoaded] = useState(false);
   const [loadedCount, setLoadedCount] = useState(0);
   const [buttonVisible, setButtonVisible] = useState(false); // Добавлено состояние для кнопки
+
   const totalImages = Object.keys(images).length;
+  const navigate = useNavigate();
 
   const handleImageLoad = () => {
     setLoadedCount(prevCount => prevCount + 1);
@@ -25,11 +27,16 @@ const AugustPromo = () => {
     if (loadedCount === totalImages) {
       setLoaded(true);
       setButtonVisible(true); // Показываем кнопку после загрузки всех изображений
+
     }
   }, [loadedCount, totalImages]);
 
+  const handleBackClick = () => {
+    navigate(-1); // Возвращает пользователя на предыдущую страницу
+  };
+
   return (
-    <div className={'LongRead'}>
+    <div className="AugustPromo">
       {!loaded && (
         <div className="loader">
           <SyncLoader
@@ -50,12 +57,11 @@ const AugustPromo = () => {
           onLoad={handleImageLoad}
         />
       ))}
+
       {buttonVisible && (
-        <Link to='/'>
-          <button className="startpage-button">
-            Назад
-          </button>
-        </Link>
+        <button className="back-button" onClick={handleBackClick}>
+          Назад
+        </button>
       )}
     </div>
   );

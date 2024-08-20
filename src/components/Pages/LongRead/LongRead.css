@@ -37,3 +37,25 @@ img {
     font-size: 18px;
     font-weight: normal;
 }
+
+.back-button {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый цвет */
+  color: #000;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  z-index: 1000;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  font-family: 'Montseratt', sans-serif;
+  font-size: 18px;
+  width: 50vw;
+  
+}
+

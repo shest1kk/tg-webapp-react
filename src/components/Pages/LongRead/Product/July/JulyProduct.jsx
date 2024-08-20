@@ -58,12 +58,10 @@ const JulyProduct = () => {
         />
       ))}
 
-{buttonVisible && (
-        <Link to='/'>
-          <button className="startpage-button">
-            Назад
-          </button>
-        </Link>
+      {buttonVisible && (
+        <button className="back-button" onClick={handleBackClick}>
+          Назад
+        </button>
       )}
     </div>
   );

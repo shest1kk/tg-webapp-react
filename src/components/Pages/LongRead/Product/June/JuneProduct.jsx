@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { SyncLoader } from "react-spinners"; // Импортируем SyncLoader
+import { SyncLoader } from "react-spinners";
 import '../../LongRead.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 const importAll = (r) => {
   let images = {};
-  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  r.keys().map((item) => { images[item.replace('./', '')] = r(item); });
   return images;
 }
 
@@ -16,6 +17,7 @@ const JuneProduct = () => {
   const [buttonVisible, setButtonVisible] = useState(false); // Добавлено состояние для кнопки
 
   const totalImages = Object.keys(images).length;
+  const navigate = useNavigate();
 
   const handleImageLoad = () => {
     setLoadedCount(prevCount => prevCount + 1);
@@ -29,17 +31,21 @@ const JuneProduct = () => {
     }
   }, [loadedCount, totalImages]);
 
+  const handleBackClick = () => {
+    navigate(-1); // Возвращает пользователя на предыдущую страницу
+  };
+
   return (
-    <div className={'LongRead'}>
+    <div className="JuneProduct">
       {!loaded && (
         <div className="loader">
           <SyncLoader
-            color="#fff" // Цвет спиннера
-            size={15} // Размер полос
-            margin={5} // Отступ между полосами
+            color="#fff"
+            size={15}
+            margin={5}
             aria-label="sync-loading"
           />
-          <p className="loading-text">Грузимся...</p> {/* Текст загрузки */}
+          <p className="loading-text">Грузимся...</p>
         </div>
       )}
       {Object.keys(images).map((key, index) => (
@@ -53,13 +59,10 @@ const JuneProduct = () => {
       ))}
 
       {buttonVisible && (
-        <Link to='/'>
-          <button className="startpage-button">
-            Назад
-          </button>
-        </Link>
+        <button className="back-button" onClick={handleBackClick}>
+          Назад
+        </button>
       )}
-
     </div>
   );
 };
