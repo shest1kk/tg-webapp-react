@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import '../StartPage/StartPage.css';
 import Button from "../../Buttons/Button";
 
@@ -10,8 +11,8 @@ const linkDictionary = {
         // Март: "/product/march",
         // Апрель: "/product/april",
         // Май: "/product/may",
-        Июнь: "/sections/product/june",
-        Июль: "/sections/product/july",
+        Июнь: "/product/june",
+        Июль: "/product/july",
         // Август: "/product/august",
         // Сентябрь: "/product/september",
         // Октябрь: "/product/october",
@@ -90,7 +91,8 @@ const AllSection = () => {
         } else {
             const url = linkDictionary[selectedCategory][month];
             if (url) {
-                window.location.href = url; // Переход по ссылке в текущем окне
+                // Навигация по ссылке
+                window.location.href = url;
             } else {
                 alert('Ссылка отсутствует');
             }
@@ -118,10 +120,10 @@ const AllSection = () => {
         <div className="StartPage_wrapper">
             <div className="StartPage_text_wrapper">
                 <div className="StartPage_username">
-                    <Button id="product-button" className={'startpage-button'} onClick={() => handleButtonClick('PRODUCT')}>PRODUCT</Button>
-                    <Button id="promo-button" className={'startpage-button'} onClick={() => handleButtonClick('PROMO')}>PROMO</Button>
-                    <Button id="people-button" className={'startpage-button'} onClick={() => handleButtonClick('PEOPLE')}>PEOPLE</Button>
-                    <Button id="place-button" className={'startpage-button'} onClick={() => handleButtonClick('PLACE')}>PLACE</Button>
+                    <Button className={'startpage-button'} onClick={() => handleButtonClick('PRODUCT')}>PRODUCT</Button>
+                    <Button className={'startpage-button'} onClick={() => handleButtonClick('PROMO')}>PROMO</Button>
+                    <Button className={'startpage-button'} onClick={() => handleButtonClick('PEOPLE')}>PEOPLE</Button>
+                    <Button className={'startpage-button'} onClick={() => handleButtonClick('PLACE')}>PLACE</Button>
                 </div>
             </div>
 
@@ -131,7 +133,17 @@ const AllSection = () => {
                         <h2 className={'selected-category'}>{selectedCategory}</h2>
                         <ul>
                             {Object.keys(linkDictionary[selectedCategory]).map((month) => (
-                                <li className={'months'} key={month} onClick={() => handleMonthClick(month)}>{month}</li>
+                                <li
+                                    className={'months'}
+                                    key={month}
+                                >
+                                    <Link
+                                        to={linkDictionary[selectedCategory][month]}
+                                        onClick={handleCloseModal}
+                                    >
+                                        {month}
+                                    </Link>
+                                </li>
                             ))}
                         </ul>
                         <Button className={'modalClose-button'} onClick={handleCloseModal}>Закрыть</Button>
