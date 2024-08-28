@@ -1,7 +1,9 @@
+// AugustPeople.jsx
 import React, { useState, useEffect } from "react";
 import { SyncLoader } from "react-spinners";
 import '../../LongRead.css';
 import { Link, useNavigate } from "react-router-dom";
+import PeopleModal from "./PeopleModal";
 
 const importAll = (r) => {
   let images = {};
@@ -11,10 +13,19 @@ const importAll = (r) => {
 
 const images = importAll(require.context('../../../../../assets/PEOPLE/August', false, /\.(jpg|jpeg|png)$/));
 
+const links = {
+  'Skillaz': 'https://cloud.akrussia.com/index.php/s/EKyBqxPjJdjWsGD',
+  'Рутина Лидеров People': 'https://cloud.akrussia.com/index.php/s/G8feRTyrAcDnQr9',
+  'Календарь мероприятий': 'https://docs.google.com/spreadsheets/d/1wreWq3XErsRlOOODpYCOP2WrZL1EgbRNcKULkP7DmlQ/edit?hl=ru&gid=0#gid=0',
+  'G&R': 'https://cloud.akrussia.com/index.php/f/1',
+  // Добавьте свои ссылки здесь
+};
+
 const AugustPeople = () => {
   const [loaded, setLoaded] = useState(false);
   const [loadedCount, setLoadedCount] = useState(0);
   const [buttonVisible, setButtonVisible] = useState(false); // Добавлено состояние для кнопки
+  const [isModalOpen, setIsModalOpen] = useState(false); // Состояние для модального окна
 
   const totalImages = Object.keys(images).length;
   const navigate = useNavigate();
@@ -27,12 +38,15 @@ const AugustPeople = () => {
     if (loadedCount === totalImages) {
       setLoaded(true);
       setButtonVisible(true); // Показываем кнопку после загрузки всех изображений
-
     }
   }, [loadedCount, totalImages]);
 
   const handleBackClick = () => {
     navigate(-1); // Возвращает пользователя на предыдущую страницу
+  };
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
   };
 
   return (
@@ -59,12 +73,17 @@ const AugustPeople = () => {
       ))}
 
       {buttonVisible && (
-        <Link to='/sections'>
-        <button className="back-button">
-          Назад
-        </button>
-        </Link>
+        <div className="button-container">
+          <Link to='/sections'>
+            <button className="back-button">Назад</button>
+          </Link>
+          <button className="modal-button" onClick={toggleModal}>
+            Ссылки
+          </button>
+        </div>
       )}
+
+      <PeopleModal isOpen={isModalOpen} onClose={toggleModal} links={links} />
     </div>
   );
 };
