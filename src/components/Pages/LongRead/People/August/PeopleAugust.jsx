@@ -24,7 +24,7 @@ const links = {
 const AugustPeople = () => {
   const [loaded, setLoaded] = useState(false);
   const [loadedCount, setLoadedCount] = useState(0);
-  const [buttonVisible, setButtonVisible] = useState(false); // Добавлено состояние для кнопки
+  const [buttonVisible, setButtonVisible] = useState(false); // Состояние для кнопки
   const [isModalOpen, setIsModalOpen] = useState(false); // Состояние для модального окна
 
   const totalImages = Object.keys(images).length;
@@ -72,7 +72,8 @@ const AugustPeople = () => {
         />
       ))}
 
-      {buttonVisible && (
+      {/* Скрываем кнопку "Назад", если модальное окно открыто */}
+      {buttonVisible && !isModalOpen && (
         <div className="button-container">
           <Link to='/sections'>
             <button className="back-button">Назад</button>

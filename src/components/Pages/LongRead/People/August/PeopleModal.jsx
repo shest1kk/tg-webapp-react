@@ -35,7 +35,7 @@ const PeopleModal = ({ isOpen, onClose, links }) => {
         
         <ul className="modal-links">
           {Object.entries(links).map(([text, url], index) => (
-            <li key={index}><a href={url} rel="noopener noreferrer">{text}</a></li>
+            <li key={index}><a href={url} target="_blank" rel="noopener noreferrer">{text}</a></li>
           ))}
         </ul>
       </div>
