@@ -6,6 +6,7 @@ import AllSection from '../components/Pages/AllSection/AllSection'
 import JuneProduct from '../components/Pages/LongRead/Product/June/JuneProduct';
 import JulyProduct from '../components/Pages/LongRead/Product/July/JulyProduct';
 import AugustPromo from '../components/Pages/LongRead/Promo/August/AugustPromo';
+import AugustPeople from '../components/Pages/LongRead/People/August/PeopleAugust';
 
 const AppRoutes = () => {
     return (
@@ -16,6 +17,7 @@ const AppRoutes = () => {
         <Route path='/product/june' element={<JuneProduct />} />
         <Route path='/product/july' element={<JulyProduct />} />
         <Route path='/promo/august' element={<AugustPromo />} />
+        <Route path='/people/august' element={<AugustPeople />} />
           {/* <Route path="longread" element={<LongRead />} /> */}
         </Routes>
       </Router>

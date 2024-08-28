@@ -34,18 +34,18 @@ const linkDictionary = {
         // Декабрь: "/promo/december",
     },
     PEOPLE: {
-        Январь: "/people/january",
-        Февраль: "/people/february",
-        Март: "/people/march",
-        Апрель: "/people/april",
-        Май: "/people/may",
-        Июнь: "/people/june",
-        Июль: "/people/july",
+        // Январь: "/people/january",
+        // Февраль: "/people/february",
+        // Март: "/people/march",
+        // Апрель: "/people/april",
+        // Май: "/people/may",
+        // Июнь: "/people/june",
+        // Июль: "/people/july",
         Август: "/people/august",
-        Сентябрь: "/people/september",
-        Октябрь: "/people/october",
-        Ноябрь: "/people/november",
-        Декабрь: "/people/december",
+        // Сентябрь: "/people/september",
+        // Октябрь: "/people/october",
+        // Ноябрь: "/people/november",
+        // Декабрь: "/people/december",
     },
     PLACE: {
         Январь: "/place/january",
@@ -70,7 +70,7 @@ const AllSection = () => {
 
     // Открытие модального окна с выбранной категорией
     const handleButtonClick = (category) => {
-        if (category === "PEOPLE" || category === "PLACE") {
+        if (category === "PLACE") {
             alert('Скоро будет :)');
         } else {
             setSelectedCategory(category);
