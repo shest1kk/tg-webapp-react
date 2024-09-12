@@ -1,8 +1,8 @@
 // Modal.jsx
 import React, { useEffect, useRef } from 'react';
-import './PeopleModal.css'; // Подключаем CSS для модального окна
+import './ModalLinks.css'; // Подключаем CSS для модального окна
 
-const PeopleModal = ({ isOpen, onClose, links }) => {
+const ModalLinks = ({ isOpen, onClose, links }) => {
   const modalRef = useRef(null);
 
   useEffect(() => {
@@ -43,4 +43,4 @@ const PeopleModal = ({ isOpen, onClose, links }) => {
   );
 };
 
-export default PeopleModal;
+export default ModalLinks;

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { SyncLoader } from "react-spinners";
 import '../../LongRead.css';
 import { Link, useNavigate } from "react-router-dom";
-import PeopleModal from "./PeopleModal";
+import ModalLinks from "../../../ModalLinks/ModalLinks";
 
 const importAll = (r) => {
   let images = {};
@@ -84,7 +84,7 @@ const AugustPeople = () => {
         </div>
       )}
 
-      <PeopleModal isOpen={isModalOpen} onClose={toggleModal} links={links} />
+      <ModalLinks isOpen={isModalOpen} onClose={toggleModal} links={links} />
     </div>
   );
 };
