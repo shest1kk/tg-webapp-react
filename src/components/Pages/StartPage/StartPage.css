@@ -5,6 +5,10 @@ html, body {
     height: 100%;
 }
 
+.new {
+    color: orange;
+}
+
 
 .StartPage_username,
 .StartPage_description {
