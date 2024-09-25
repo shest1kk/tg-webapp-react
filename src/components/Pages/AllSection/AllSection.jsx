@@ -42,7 +42,7 @@ const linkDictionary = {
         // Июнь: "/people/june",
         // Июль: "/people/july",
         Август: "/people/august",
-        // Сентябрь: "/people/september",
+        Сентябрь: "/people/september",
         // Октябрь: "/people/october",
         // Ноябрь: "/people/november",
         // Декабрь: "/people/december",

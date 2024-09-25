@@ -8,6 +8,7 @@ import JulyProduct from '../components/Pages/LongRead/Product/July/JulyProduct';
 import AugustPromo from '../components/Pages/LongRead/Promo/August/AugustPromo';
 import AugustPeople from '../components/Pages/LongRead/People/August/PeopleAugust';
 import SeptemberPromo from '../components/Pages/LongRead/Promo/September/SeptemberPromo';
+import SeptemberPeople from '../components/Pages/LongRead/People/September/SeptemberPeople';
 
 const AppRoutes = () => {
     return (
@@ -20,6 +21,7 @@ const AppRoutes = () => {
         <Route path='/promo/august' element={<AugustPromo />} />
         <Route path='/people/august' element={<AugustPeople />} />
         <Route path='/promo/september' element={<SeptemberPromo />} />
+        <Route path='/people/september' element={<SeptemberPeople />} />
           {/* <Route path="longread" element={<LongRead />} /> */}
         </Routes>
       </Router>

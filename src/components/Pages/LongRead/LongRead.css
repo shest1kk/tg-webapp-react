@@ -1,13 +1,13 @@
 .LongRead {
     display: flex;
     flex-direction: column;
+    overflow: hidden; /* Убираем видимость слайдеров для прокрутки */
 }
 
 img {
     width: 100vw;
-
+    height: auto; /* Адаптивная высота для изображений */
 }
-
 
 .loader {
     display: flex;
@@ -15,27 +15,22 @@ img {
     align-items: center;
     justify-content: center;
     height: 100vh; /* Высота на весь экран */
-  }
-  
-  .loading-text {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #ffffff; /* Цвет текста */
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .visible {
-    display: block;
-  }
+}
 
 .loading-text {
     margin-top: 20px;
-    font-family: 'Montseratt', sans-serif;
     font-size: 18px;
+    color: #ffffff; /* Цвет текста */
+    font-family: 'Montseratt', sans-serif;
     font-weight: normal;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
 }
 
 .back-button {
@@ -55,8 +50,6 @@ img {
   transition: background-color 0.3s ease;
   font-family: 'Montseratt', sans-serif;
   font-size: 18px;
-  width: 50vw;
-  
+  width: 50vw; /* Адаптивная ширина для кнопки */
 }
-
 
