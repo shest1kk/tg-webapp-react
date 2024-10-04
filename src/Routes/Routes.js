@@ -9,6 +9,7 @@ import AugustPromo from '../components/Pages/LongRead/Promo/August/AugustPromo';
 import AugustPeople from '../components/Pages/LongRead/People/August/PeopleAugust';
 import SeptemberPromo from '../components/Pages/LongRead/Promo/September/SeptemberPromo';
 import SeptemberPeople from '../components/Pages/LongRead/People/September/SeptemberPeople';
+import SeptemberProduct from '../components/Pages/LongRead/Product/September/SeptemberProduct';
 
 const AppRoutes = () => {
     return (
@@ -22,6 +23,7 @@ const AppRoutes = () => {
         <Route path='/people/august' element={<AugustPeople />} />
         <Route path='/promo/september' element={<SeptemberPromo />} />
         <Route path='/people/september' element={<SeptemberPeople />} />
+        <Route path='/product/september' element={<SeptemberProduct />} />
           {/* <Route path="longread" element={<LongRead />} /> */}
         </Routes>
       </Router>
