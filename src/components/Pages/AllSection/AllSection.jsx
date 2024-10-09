@@ -29,7 +29,7 @@ const linkDictionary = {
         // Июль: "/promo/july",
         Август: "/promo/august",
         Сентябрь: "/promo/september",
-        // Октябрь: "/promo/october",
+        Октябрь: "/promo/october",
         // Ноябрь: "/promo/november",
         // Декабрь: "/promo/december",
     },
@@ -104,8 +104,8 @@ const AllSection = () => {
         <div className="StartPage_wrapper">
             <div className="StartPage_text_wrapper">
                 <div className="StartPage_username">
-                    <Button className={'startpage-button'} onClick={() => handleButtonClick('PRODUCT')}>PRODUCT <span className="new">new</span></Button>
-                    <Button className={'startpage-button'} onClick={() => handleButtonClick('PROMO')}>PROMO</Button>
+                    <Button className={'startpage-button'} onClick={() => handleButtonClick('PRODUCT')}>PRODUCT</Button>
+                    <Button className={'startpage-button'} onClick={() => handleButtonClick('PROMO')}>PROMO <span className="new">new</span></Button>
                     <Button className={'startpage-button'} onClick={() => handleButtonClick('PEOPLE')}>PEOPLE</Button>
                     <Button className={'startpage-button'} onClick={() => handleButtonClick('PLACE')}>PLACE</Button>
                 </div>
